@@ -1,3 +1,8 @@
+# .bashrc
+
+# source profile common
+source ~/.bashrc.ext/.bashrc.ext.common
+
 # To the extent possible under law, the author(s) have dedicated all 
 # copyright and related and neighboring rights to this software to the 
 # public domain worldwide. This software is distributed without any warranty. 
@@ -196,13 +201,4 @@
 # }
 # 
 # alias cd=cd_func
-
-# set PS1 prompt
-PS1="\[\e[1;32m\][\u@\h \w]\t\[\e[0m\]$ "
-
-# set aliases
-alias l='ls -halF'
-alias +='pushd'
-alias -- -='popd'
-=(){ dirs -v; }
 

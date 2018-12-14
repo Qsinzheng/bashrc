@@ -1,0 +1,8 @@
+# .bashrc
+
+# source profile common
+source ~/.bashrc.ext/.bashrc.ext.common
+
+# enable ls color
+export CLICOLOR=1
+

@@ -1,0 +1,9 @@
+# .bashrc
+
+# source profile common
+source ~/.bashrc.ext/.bashrc.ext.common
+
+# source profiles
+source ~/.bashrc.ext/.bashrc.ext.sec.tmux
+source ~/.bashrc.ext/.bashrc.ext.sec.blade
+source ~/.bashrc.ext/.bashrc.ext.sec.git

@@ -1,0 +1,32 @@
+# .bashrc
+
+# source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# source profile bashscriptlet
+[ -f ~/bashscriptlet/.sprofile ] && source ~/bashscriptlet/.sprofile
+
+# set PS1 prompt
+red=$(tput    setaf  1)
+green=$(tput  setaf  2)
+blue=$(tput   setaf  4)
+cyan=$(tput   setaf  6)
+bold=$(tput   bold)
+reset=$(tput  sgr0)
+#PS1="\[\e[1;32m\][\u@\H \w]\t\[\e[0m\]$ "
+PS1='\[$green\][\u@\H:\[$bold\]\W]\[$reset\]\$ '
+
+
+# User specific aliases and functions
+
+# set aliases
+alias l='ls -halF'
+
+alias +='pushd'
+alias -- -='popd'
+=(){ dirs -v; }
+
+alias grep='grep --color'
+

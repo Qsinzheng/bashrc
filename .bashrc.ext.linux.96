@@ -1,0 +1,4 @@
+# .bashrc
+
+# source profile dev
+source ~/.bashrc.ext/.bashrc.ext.dev
