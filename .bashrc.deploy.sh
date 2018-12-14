@@ -2,10 +2,10 @@
 # script to deploy .bashrc.ext profile, by Qsinzheng at 20181214
 
 [ $# -lt 2 -o "$1" == "-h" -o "$1" == "-h" ]  && 
-    echo "usage  : $0 action   bashrc-ext-profile" &&
-    echo "example: $0 deploy   .bashrc.ext.dev"     &&
+    echo "usage  : $0 action    bashrc-ext-profile" &&
     echo "example: $0 deploy   .bashrc.ext.linux"   &&
     echo "example: $0 deploy   .bashrc.ext.mac"     &&
+    echo "example: $0 deploy   .bashrc.ext.dev"     &&
     echo "example: $0 undeploy .bashrc.ext.cyg"     && exit 1;
 Action=$1;
 shift 1;
