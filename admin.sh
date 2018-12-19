@@ -1,5 +1,5 @@
 #!/bin/bash
-# script to deploy .bashrc.ext profile, by Qsinzheng at 20181214
+# script to deploy xprofile, by Qsinzheng at 20181219
 
 [ $# -lt 3 -o "$1" == "-h" -o "$1" == "-h" ]  && 
     echo "usage  : $0 action   profile-type bashrc-ext-profile | vimrc-ext-profile" &&
