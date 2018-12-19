@@ -7,9 +7,9 @@
     echo "example: $0 deploy   .vimrc.ext.enhanced.vim" &&
     echo "example: $0 deploy   .vimrc.ext.linux.vim"    &&
     echo "example: $0 undeploy .vimrc.ext.mac.vim"      && exit 1;
-Action=$1;
+Action="$1";
 shift 1;
-VimRCProfile=$@;
+VimRCProfile="$@";
 VimRCProfileSuit=(.vimrc.ext.*);
 
    MyProfile=~/.vimrc
@@ -27,10 +27,11 @@ fi
 # deploy the specified .vimrc.ext profile
 for profile in $VimRCProfile; do
     SourceLine="source ~/.vimrc.ext/$profile"
-    Deployed=$(grep "$SourceLine" "$MyProfile")
-    echo "====found source line:<$Deployed>" 1>&2
+    Found=$(grep "$SourceLine" "$MyProfile")
+    [ -n "$Found" ] && Deployed=true || Deployed=false
+    echo "====check source line:<$SourceLine>, deployed:$Deployed" 1>&2
     # check whether the .vimrc.ext profile is deployed
-    if [ -z "$Deployed" ]; then # not-deployed
+    if ! $Deployed ; then # not-deployed
         if [ "$Action" == "deploy" ]; then
             echo "====deploy $profile" 1>&2
             echo  "$SourceLine" >> "$MyProfile"
@@ -42,5 +43,6 @@ for profile in $VimRCProfile; do
             [ $? -ne 0 ] && sed -i '' "\#$SourceLine#d" "$MyProfile" 2>/dev/null; # mac
         fi
     fi
+    echo "====$Action $profile done" 1>&2
 done
 

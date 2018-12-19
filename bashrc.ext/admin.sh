@@ -7,9 +7,9 @@
     echo "example: $0 deploy   .bashrc.ext.mac"     &&
     echo "example: $0 deploy   .bashrc.ext.dev"     &&
     echo "example: $0 undeploy .bashrc.ext.cyg"     && exit 1;
-Action=$1;
+Action="$1";
 shift 1;
-BashRCProfile=$@;
+BashRCProfile="$@";
 BashRCProfileSuit=(.bashrc.ext.*);
 
    MyProfile=~/.bashrc
@@ -27,10 +27,11 @@ fi
 # deploy the specified .bashrc.ext profile
 for profile in $BashRCProfile; do
     SourceLine="source ~/.bashrc.ext/$profile"
-    Deployed=$(grep "$SourceLine" "$MyProfile")
-    echo "====found source line:<$Deployed>" 1>&2
+    Found=$(grep "$SourceLine" "$MyProfile")
+    [ -n "$Found" ] && Deployed=true || Deployed=false
+    echo "====check source line:<$SourceLine>, deployed:$Deployed" 1>&2
     # check whether the .bashrc.ext profile is deployed
-    if [ -z "$Deployed" ]; then # not-deployed
+    if ! $Deployed ; then # not-deployed
         if [ "$Action" == "deploy" ]; then
             echo "====deploy $profile" 1>&2
             echo  "$SourceLine" >> "$MyProfile"
@@ -42,7 +43,6 @@ for profile in $BashRCProfile; do
             [ $? -ne 0 ] && sed -i '' "\#$SourceLine#d" "$MyProfile" 2>/dev/null; # mac
         fi
     fi
+    echo "====$Action $profile done" 1>&2
 done
 
-# load updated profile
-source "$MyProfile"
