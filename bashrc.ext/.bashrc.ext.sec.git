@@ -32,4 +32,5 @@ alias gps='git push'
 alias gpl='git pull'
 alias gcl='git clone'
 alias gfc='git fetch'
+alias grt='git remote'
 
