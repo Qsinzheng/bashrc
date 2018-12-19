@@ -18,7 +18,6 @@ fi
 # User specific aliases and functions
 
 # git aliases
-alias gv='git --version'
 alias ga='git add'
 alias gl='git log'
 alias gs='git status'
