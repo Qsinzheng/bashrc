@@ -3,10 +3,13 @@
 
 [ $# -lt 3 -o "$1" == "-h" -o "$1" == "-h" ]  && 
     echo "usage  : $0 action   profile-type bashrc-ext-profile | vimrc-ext-profile" &&
-    echo "example: $0 deploy   bashrc       .bashrc.ext.linux"   &&
-    echo "example: $0 deploy   bashrc       .bashrc.ext.mac"     &&
-    echo "example: $0 deploy   bashrc       .bashrc.ext.dev"     &&
-    echo "example: $0 undeploy bashrc       .bashrc.ext.cyg"     &&
+    echo "example: $0 deploy   bashrc       .bashrc.ext.linux"     &&
+    echo "example: $0 deploy   bashrc       .bashrc.ext.mac"       &&
+    echo "example: $0 deploy   bashrc       .bashrc.ext.dev"       &&
+    echo "example: $0 undeploy bashrc       .bashrc.ext.cyg"       &&
+    echo "example: $0 deploy   bashrc       .bashrc.ext.sec.proxy-on"  &&
+    echo "example: $0 undeploy bashrc       .bashrc.ext.sec.proxy-on"  &&
+    echo "example: $0 deploy   bashrc       .bashrc.ext.sec.proxy-off" &&
     echo "example: $0 deploy   vimrc        .vimrc.ext.simple.vim"   &&
     echo "example: $0 deploy   vimrc        .vimrc.ext.enhanced.vim" &&
     echo "example: $0 deploy   vimrc        .vimrc.ext.linux.vim"    &&

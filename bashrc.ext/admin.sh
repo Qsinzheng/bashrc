@@ -2,11 +2,14 @@
 # script to deploy .bashrc.ext profile, by Qsinzheng at 20181214
 
 [ $# -lt 2 -o "$1" == "-h" -o "$1" == "-h" ]  && 
-    echo "usage  : $0 action    bashrc-ext-profile" &&
-    echo "example: $0 deploy   .bashrc.ext.linux"   &&
-    echo "example: $0 deploy   .bashrc.ext.mac"     &&
-    echo "example: $0 deploy   .bashrc.ext.dev"     &&
-    echo "example: $0 undeploy .bashrc.ext.cyg"     && exit 1;
+    echo "usage  : $0 action    bashrc-ext-profile"   &&
+    echo "example: $0 deploy   .bashrc.ext.linux"     &&
+    echo "example: $0 deploy   .bashrc.ext.mac"       &&
+    echo "example: $0 deploy   .bashrc.ext.dev"       &&
+    echo "example: $0 undeploy .bashrc.ext.cyg"       &&
+    echo "example: $0 deploy   .bashrc.ext.sec.proxy-on"  &&
+    echo "example: $0 undeploy .bashrc.ext.sec.proxy-on"  &&
+    echo "example: $0 deploy   .bashrc.ext.sec.proxy-off" && exit 1;
 Action="$1";
 shift 1;
 BashRCProfile="$@";
@@ -26,6 +29,7 @@ fi
 
 # deploy the specified .bashrc.ext profile
 for profile in $BashRCProfile; do
+    [ ! -f "$profile" ] && continue;
     SourceLine="source ~/.bashrc.ext/$profile"
     Found=$(grep "$SourceLine" "$MyProfile")
     [ -n "$Found" ] && Deployed=true || Deployed=false

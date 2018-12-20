@@ -26,6 +26,7 @@ fi
 
 # deploy the specified .vimrc.ext profile
 for profile in $VimRCProfile; do
+    [ ! -f "$profile" ] && continue;
     SourceLine="source ~/.vimrc.ext/$profile"
     Found=$(grep "$SourceLine" "$MyProfile")
     [ -n "$Found" ] && Deployed=true || Deployed=false

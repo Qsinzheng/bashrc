@@ -1,0 +1,6 @@
+# .bashrc
+
+export HTTPS_PROXY=http://web-proxy.tencent.com:8080
+export HTTP_PROXY=http://web-proxy.tencent.com:8080
+export NO_PROXY="localhost,127.0.0.1"
+

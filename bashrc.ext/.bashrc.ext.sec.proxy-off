@@ -1,0 +1,6 @@
+# .bashrc
+
+export HTTPS_PROXY=""
+export HTTP_PROXY=""
+export NO_PROXY=""
+
