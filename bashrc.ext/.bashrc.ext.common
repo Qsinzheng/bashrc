@@ -5,6 +5,10 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# lang & character setting
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 # source profile bashscriptlet
 [ -f ~/bashscriptlet/.sprofile ] && source ~/bashscriptlet/.sprofile
 
