@@ -32,9 +32,13 @@ set nu
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme setting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"colorscheme desert
-colorscheme evening
-"colorscheme ron
+if exists('g:colorscheme_use_default')
+    if g:colorscheme_use_default != 'true'
+        "colorscheme desert
+        colorscheme evening
+        "colorscheme ron
+    endif
+endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
