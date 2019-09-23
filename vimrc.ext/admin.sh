@@ -2,11 +2,11 @@
 # script to deploy .vimrc.ext profile, by Qsinzheng at 20181214
 
 [ $# -lt 2 -o "$1" == "-h" -o "$1" == "-h" ]  && 
-    echo "usage  : $0 action    vimrc-ext-profile"      &&
-    echo "example: $0 deploy   .vimrc.ext.simple.vim"   &&
-    echo "example: $0 deploy   .vimrc.ext.enhanced.vim" &&
-    echo "example: $0 deploy   .vimrc.ext.linux.vim"    &&
-    echo "example: $0 undeploy .vimrc.ext.mac.vim"      && exit 1;
+    echo "usage  : $0 action    vimrc-ext-profile"                &&
+    echo "example: $0 deploy   .vimrc.ext.entry.elementary.vim"   &&
+    echo "example: $0 deploy   .vimrc.ext.entry.advanced.vim"     &&
+    echo "example: $0 deploy   .vimrc.ext.entry.linux.vim"        &&
+    echo "example: $0 undeploy .vimrc.ext.mac.vim"                && exit 1;
 Action="$1";
 shift 1;
 VimRCProfile="$@";
