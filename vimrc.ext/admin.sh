@@ -12,7 +12,7 @@ shift 1;
 VimRCProfile="$@";
 VimRCProfileSuit=(.vimrc.ext.*);
 
-   MyProfile=~/.vimrc
+[ -f ~/.vimrc.local ] && MyProfile=~/.vimrc.local || MyProfile=~/.vimrc
 VimRCExtDir=~/.vimrc.ext
 [ ! -f "$MyProfile"   ] && touch "$MyProfile"
 [ ! -f "$VimRCExtDir" ] && mkdir -p "$VimRCExtDir"
