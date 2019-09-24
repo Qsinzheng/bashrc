@@ -1,7 +1,7 @@
 # .bashrc
 
 # set terminal
-TERM=screen-256color-bce
+#TERM=screen-256color-bce
 
 # make it compatible with 256 color for colorschemes
 alias tmux='tmux -2'

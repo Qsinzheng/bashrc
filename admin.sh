@@ -10,10 +10,10 @@
     echo "example: $0 deploy   bashrc       .bashrc.ext.sec.proxy-on"  &&
     echo "example: $0 undeploy bashrc       .bashrc.ext.sec.proxy-on"  &&
     echo "example: $0 deploy   bashrc       .bashrc.ext.sec.proxy-off" &&
-    echo "example: $0 deploy   vimrc        .vimrc.ext.simple.vim"   &&
-    echo "example: $0 deploy   vimrc        .vimrc.ext.enhanced.vim" &&
-    echo "example: $0 deploy   vimrc        .vimrc.ext.linux.vim"    &&
-    echo "example: $0 undeploy vimrc        .vimrc.ext.mac.vim"      && exit 1;
+    echo "example: $0 deploy   vimrc        .vimrc.ext.entry.elementary.vim"   &&
+    echo "example: $0 deploy   vimrc        .vimrc.ext.entry.advanced.vim" &&
+    echo "example: $0 deploy   vimrc        .vimrc.ext.entry.linux.vim"    &&
+    echo "example: $0 undeploy vimrc        .vimrc.ext.entry.mac.vim"      && exit 1;
 Action=$1;
 ProfileType=$2;
 shift 2;
