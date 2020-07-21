@@ -1,23 +1,62 @@
 set hidden " 避免必须保存修改才可以跳转buffer
 
-" buffer快速导航
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
+" tabpage快速导航
+nnoremap <Leader>b gT
+nnoremap <Leader>f gt
 
-" 查看buffers
-nnoremap <Leader>l :ls<CR>
+" 查看tabs
+nnoremap <Leader>t :tabs<CR>
 
 " 通过索引快速跳转
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
+nnoremap <Leader>1  1gt<CR>
+nnoremap <Leader>2  2gt<CR>
+nnoremap <Leader>3  3gt<CR>
+nnoremap <Leader>4  4gt<CR>
+nnoremap <Leader>5  5gt<CR>
+nnoremap <Leader>6  6gt<CR>
+nnoremap <Leader>7  7gt<CR>
+nnoremap <Leader>8  8gt<CR>
+nnoremap <Leader>9  9gt<CR>
+nnoremap <Leader>10 10gt<CR>
+nnoremap <Leader>11 11gt<CR>
+nnoremap <Leader>12 12gt<CR>
+nnoremap <Leader>13 13gt<CR>
+nnoremap <Leader>14 14gt<CR>
+nnoremap <Leader>15 15gt<CR>
+nnoremap <Leader>16 16gt<CR>
+nnoremap <Leader>17 17gt<CR>
+nnoremap <Leader>18 18gt<CR>
+nnoremap <Leader>19 19gt<CR>
+nnoremap <Leader>20 20gt<CR>
+
+" buffer快速导航
+nnoremap <Leader><Leader>b :bp<CR>
+nnoremap <Leader><Leader>f :bn<CR>
+
+" 查看buffers
+nnoremap <Leader><Leader>l :ls<CR>
+
+" 通过索引快速跳转
+nnoremap <Leader><Leader>1  :1b<CR>
+nnoremap <Leader><Leader>2  :2b<CR>
+nnoremap <Leader><Leader>3  :3b<CR>
+nnoremap <Leader><Leader>4  :4b<CR>
+nnoremap <Leader><Leader>5  :5b<CR>
+nnoremap <Leader><Leader>6  :6b<CR>
+nnoremap <Leader><Leader>7  :7b<CR>
+nnoremap <Leader><Leader>8  :8b<CR>
+nnoremap <Leader><Leader>9  :9b<CR>
+nnoremap <Leader><Leader>10 :10b<CR>
+nnoremap <Leader><Leader>11 :11b<CR>
+nnoremap <Leader><Leader>12 :12b<CR>
+nnoremap <Leader><Leader>13 :13b<CR>
+nnoremap <Leader><Leader>14 :14b<CR>
+nnoremap <Leader><Leader>15 :15b<CR>
+nnoremap <Leader><Leader>16 :16b<CR>
+nnoremap <Leader><Leader>17 :17b<CR>
+nnoremap <Leader><Leader>18 :18b<CR>
+nnoremap <Leader><Leader>19 :19b<CR>
+nnoremap <Leader><Leader>20 :20b<CR>
 
 " tabline setting
 "function MyTabLine()
