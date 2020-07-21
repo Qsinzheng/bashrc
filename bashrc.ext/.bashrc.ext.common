@@ -35,5 +35,18 @@ alias +='pushd'
 alias -- -='popd'
 =(){ dirs -v; }
 
+# load dir entry from file to the dir stack
+function dl()
+{
+    dirs_file="$1"
+    if [ -z "$dirs_file" ]; then
+        echo "NO dir entry list file(such as exported from: dirs -v) specified" >&2;
+    else
+        dirs -c;  # clear current stack
+        for d in $(tac "$dirs_file" | grep -v "^#" | awk '{print $NF}' ); do pushd $d >/dev/null; done
+        pushd -0; # keep current(before load) as top
+    fi
+}
+
 alias grep='grep --color'
 
